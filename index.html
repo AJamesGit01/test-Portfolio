@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+<body class="bg-[#1C1C1C] text-white font-[Poppins]" id="body" class="bg-gray-100 text-gray-800 transition-colors duration-300">
+
+<script>
+  document.addEventListener('mousemove', (e) => {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = `${e.clientX}px`;
+    particle.style.top = `${e.clientY}px`;
+
+    document.body.appendChild(particle);
+
+    // Remove particle after animation
+    setTimeout(() => {
+      particle.remove();
+    }, 700); // Matches animation duration
+  });
+</script>
+
+
+<!-- Header -->
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full bg-[#2A2A2A] shadow-md px-6 py-4 flex items-center justify-end z-50">
+  <div class="flex items-center gap-4">
+    <!-- Hamburger Button -->
+    <button onclick="toggleMobileMenu()">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+      <!-- Slide-In Sidebar Menu -->
+<div id="mobileSidebar" class="fixed top-0 right-0 h-full w-1/2 md:w-64 text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 animate-rgb">
+  <div class="flex justify-between items-center px-4 py-4 border-b border-white">
+    <h2 class="text-lg font-bold animate-link">Menu</h2>
+
+    <!-- X Close Button -->
+    <button onclick="toggleMobileMenu()">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <ul class="flex flex-col p-4 space-y-4">
+    <li><a href="#home" class="animate-link">Home</a></li>
+    <li><a href="#about" class="animate-link">About</a></li>
+    <li><a href="#experience" class="animate-link">Experiences</a></li>
+    <li><a href="#projects" class="animate-link">Projects</a></li>
+    <li><a href="#contact" class="animate-link">Contact</a></li>
+  </ul>
+</div>
+ 
+    <!-- Home -->
+    <section id="home" class="text-center py-20 animate-rgb bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-[length:400%_400%] text-white">
+  
+      <!-- Profile Image -->
+      <img 
+        src="profile.jpg" 
+        alt="Allen James Datuin" 
+        class="mx-auto w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6"
+      />
+    
+    <h2 class="typewriter text-2xl sm:text-3xl md:text-4xl font-bold mb-4 neon-solid-glow text-white leading-tight sm:leading-normal max-w-[90%] mx-auto text-center">
+      Hi, I'm Allen James Datuin
+    </h2>
+
+      
+      <p class="text-lg neon-solid-glow text-cyan-300">
+         Student | Designer | Creator
+      </p>
+    </section>
+    
+<!-- About -->
+<section id="about" class="pt-16 px-4 pb-8 text-white animate-rgb">
+  <div class="bg-[#2A2A2A] rounded-xl p-6 shadow-lg hover:shadow-xl transition max-w-3xl mx-auto border border-white/20">
+    <h2 class="text-3xl font-bold mb-4 text-center neon-solid-glow text-white">About Me</h2>
+    <p class="text-gray-100 text-lg leading-relaxed text-center">
+      I’m a passionate developer focused on building responsive web applications and user-friendly designs. I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+    </p>
+  </div>
+</section>
+
+    <section id="about" class="p-8 bg-[#1e1e1e] text-white relative overflow-hidden">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <!-- Block 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- Image -->
+            <img 
+              src="about-3.jpg" 
+              alt="About Image" 
+              class="w-[430px] h-[500px] rounded-lg object-cover shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            />
+
+          <!-- Text -->
+           <div class="w-full md:w-1/2 space-y-4 border-white p-4 bg-white rounded-xl shadow-lg animate-rgb">
+            <p class="text-white text-lg leading-relaxed">
+              I’m a passionate developer focused on building responsive web applications and user-friendly designs...
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+              I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+              Always exploring new tech and improving performance through design and clean code.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Block 2 (flipped for variation if you want) -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+          <!-- Image -->
+          <div class="w-full md:w-1/2">
+            <img 
+              src="about-2.jpg" 
+              alt="About Image" 
+              class="w-[430px] h-[500px] rounded-lg object-cover shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            />
+          </div>
+          <!-- Text -->
+          <div class="w-full md:w-1/2 space-y-4 border-white p-4 bg-white rounded-xl shadow-lg animate-rgb">
+            <p class="text-white text-lg leading-relaxed">
+              I’m a passionate developer focused on building responsive web applications and user-friendly designs...
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+              I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+              Always exploring new tech and improving performance through design and clean code.
+            </p>
+          </div>
+        </div>
+        
+      <!-- Block 3 (flipped for variation if you want) -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- Image -->
+            <img 
+              src="familybg.jpg" 
+              alt="About Image" 
+              class="w-[430px] h-[500px] rounded-lg object-cover shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            />
+
+          <!-- Text -->
+          <div class="w-full md:w-1/2 flex flex-col gap-4 p-4 bg-white rounded-xl shadow-lg animate-rgb">
+            <p class="text-white text-base md:text-lg leading-relaxed">
+              I’m a passionate developer focused on building responsive web applications and user-friendly designs...
+            </p>
+            <p class="text-white text-base md:text-lg leading-relaxed">
+              I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+            </p>
+            <p class="text-white text-base md:text-lg leading-relaxed">
+              Always exploring new tech and improving performance through design and clean code.
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Skills, Trainings & Certificates -->
+<section id="experience" class="px-4 pb-16 text-white animate-rgb animated-border">
+  <h2 class="text-3xl font-bold mb-6 mt-12 text-center neon-solid-glow text-white">
+  Skills, Trainings & Certificates
+</h2>
+
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Acquired Skills -->
+    <div class="bg-[#2A2A2A] rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-4 text-blue-400">Acquired Skills</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-200">
+        <li>HTML, CSS, JavaScript</li>
+        <li>Tailwind CSS & Bootstrap</li>
+        <li>ReactJS (Basic)</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+
+    <!-- Attended Trainings -->
+    <div class="bg-[#2A2A2A] rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-4 text-green-400">Attended Trainings</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-200">
+        <li>Web Development Webinars</li>
+        <li>ReactJS Course YT</li>
+        <li>Git & Version Control</li>
+        <ol class="mr-0 pl-6 text-blue-200"><a href="https://roadmap.sh/u/allenjamesdatuin" target="https://roadmap.sh/u/allenjamesdatuin">Roadmap.sh</a></ol>
+        <li>UI/UX Fundamentals</li>
+        <ol class="mr-0 pl-6 text-blue-200"><a href="https://roadmap.sh/u/allenjamesdatuin" target="https://roadmap.sh/u/allenjamesdatuin">Roadmap.sh</a></ol>
+      </ul>
+    </div>
+
+    <!-- Certificates -->
+    <div class="bg-[#2A2A2A] rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+      <h3 class="text-xl font-semibold mb-4 text-purple-400">Certificates</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-200">
+        <li>Responsive Web Design</li>
+        <ol class="mr-0 pl-6 text-blue-200"><a href="https://web.dev/learn/css" target="https://web.dev/learn/css">web.dev</a></ol>
+        <li>JavaScript Courses</li>
+        <ol class="mr-0 pl-6 text-blue-200"><a href="https://scrimba.com/home" target="https://scrimba.com/home">scrimba.com</a></ol>
+        <li>Python Courses</li>
+        <ol class="mr-0 pl-6 text-blue-200"><a href="https://www.sololearn.com/en/profile/34058694" target="https://www.sololearn.com/en/profile/34058694">sololearn.com</a></ol>
+      </ul>
+    </div>
+  </div>
+</section>
+    
+  
+    <!-- Projects -->
+    <section id="projects" class="p-8 bg-[#333333]">
+      <h3 class="text-2xl font-bold mb-6">Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A]">A responsive landing page for a product showcase.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A] mb-2">A to-do app with basic CRUD operations using JS.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A]">A responsive landing page for a product showcase.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A] mb-2">A to-do app with basic CRUD operations using JS.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A]">A responsive landing page for a product showcase.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A] mb-2">A to-do app with basic CRUD operations using JS.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A]">A responsive landing page for a product showcase.</p>
+        </div>
+        <div class="bg-white shadow-md p-4 rounded-md">
+          <p class="text-[#2A2A2A] mb-2">A to-do app with basic CRUD operations using JS.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- Challenges & Learnings -->
+<section class="pt-16 px-4 pb-16 text-white animate-rgb">
+  <h2 class="text-3xl font-bold mb-6 text-center neon-solid-glow text-white">Challenges & Learnings</h2>
+
+  <div class="bg-[#2A2A2A] rounded-xl p-6 shadow-lg hover:shadow-xl transition max-w-4xl mx-auto border border-white/20">
+    <div class="space-y-6 text-gray-200">
+      <!-- Challenges Faced -->
+      <div>
+        <h3 class="text-xl font-semibold text-red-400 mb-2">Challenges I’ve Faced</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Balancing academic workload with personal projects and deadlines.</li>
+          <li>Debugging complex code without much external help.</li>
+          <li>Adapting quickly to new technologies and tools under time pressure.</li>
+          <li>Collaborating effectively in group projects with diverse workflows.</li>
+        </ul>
+      </div>
+
+      <!-- Life Learnings -->
+      <div>
+        <h3 class="text-xl font-semibold text-yellow-300 mb-2">Acquired Life Learnings</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Persistence pays off — every error is an opportunity to learn.</li>
+          <li>Time management is key to handling both solo and team responsibilities.</li>
+          <li>Clear communication prevents confusion and improves collaboration.</li>
+          <li>Continuous learning keeps you confident and prepared for challenges.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Contact -->
+<section id="contact" class="p-8 animate-rgb bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-[length:400%_400%] text-white">
+  <h3 class="text-3xl font-bold mb-4 text-white text-center drop-shadow-[0_0_20px_rgba(255,255,255,0.9)]">
+    Contact Me
+  </h3>           
+
+  <form class="grid gap-4 max-w-md mx-auto mb-6" onsubmit="handleSubmit(event)">
+    <input type="text" placeholder="Name" class="border border-white bg-transparent text-white p-2 rounded placeholder-white" required />
+    <input type="email" placeholder="Email" class="border border-white bg-transparent text-white p-2 rounded placeholder-white" required />
+    <textarea placeholder="Message" class="border border-white bg-transparent text-white p-2 rounded placeholder-white" rows="4" required></textarea>
+    <button type="submit" class="btn-rgb-blue text-white font-semibold p-2 rounded shadow-lg 
+      focus:outline-none focus:ring-4 focus:ring-blue-300 
+      transition-all duration-500 hover:brightness-110">
+      Send
+    </button>
+  </form>
+
+  <!-- Social Media Icons -->
+<div class="flex justify-center gap-6 text-2xl">
+  <a href="https://www.facebook.com/Ajames.datuin0901" target="_blank" class="hover:scale-110 hover:shadow-lg hover:text-blue-300 transition-all duration-300">
+    <i class="fab fa-facebook-f"></i><span class="sr-only">Facebook</span>
+  </a>
+  <a href="https://www.instagram.com/allenski_01" target="_blank" class="hover:scale-110 hover:shadow-lg hover:text-pink-300 transition-all duration-300">
+    <i class="fab fa-instagram"></i><span class="sr-only">Instagram</span>
+  </a>
+  <a href="https://t.me/AJames_01" target="_blank" class="hover:scale-110 hover:shadow-lg hover:text-blue-200 transition-all duration-300">
+    <i class="fab fa-telegram"></i><span class="sr-only">Telegram</span>
+  </a>
+  <a href="https://github.com/AJamesGit01" target="_blank" class="hover:scale-110 hover:shadow-lg hover:text-gray-300 transition-all duration-300">
+    <i class="fab fa-github"></i><span class="sr-only">GitHub</span>
+  </a>
+</div>
+
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+      &copy; 2025 My Personal Portfolio. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
