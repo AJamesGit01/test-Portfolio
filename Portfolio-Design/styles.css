@@ -1,0 +1,198 @@
+html {
+    scroll-behavior: smooth;
+}
+
+  @keyframes rgb {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-rgb {
+    animation: rgb 8s ease infinite;
+    background-size: 400% 400%;
+    background-image: linear-gradient(to right, rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56));
+  }
+
+  .animate-link {
+    background-image: linear-gradient(to right, #e4e4e4, #7c7385, #f0f4f4, #ffffff);
+    background-size: 300% 300%;
+    animation: rgb 6s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }
+
+.particle {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56);
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+  animation: fadeOut 0.7s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes rgb-border {
+    0% {
+      border-image-source: linear-gradient(to right, rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56));
+      border-image-slice: 1;
+    }
+    50% {
+      border-image-source: linear-gradient(to right, rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56));
+    }
+    100% {
+      border-image-source: linear-gradient(to right, rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56));
+    }
+  }
+  
+  .animated-border {
+    border-width: 3px;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgb(68, 45, 45), rgb(43, 49, 43), rgb(109, 109, 122), rgb(78, 56, 56));
+    animation: rgb-border 8s infinite linear;
+  }
+  
+
+.rgb-animated-bg {
+  animation: rgbBackground 10s linear infinite;
+  transition: background-color 1s ease-in-out;
+}
+
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #2A2A2A;
+    white-space: nowrap;
+    animation: typing 8s steps(30, end) infinite, blink 0.75s step-end infinite;
+  }
+  
+/* Responsive mobile tweaks */
+@media (max-width: 640px) {
+  .typewriter {
+    font-size: 1rem; /* smaller text */
+    width: 90%;
+    animation: typing 4s steps(35, end) infinite, blink 0.75s step-end infinite;
+  }
+}
+
+@keyframes rgb {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-rgb {
+    animation: monochromeShift 12s ease-in-out infinite;
+    background-size: 300% 300%;
+  }
+  
+  .animate-rgb-text {
+    animation: monochromeShift 12s linear infinite;
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes monochromeShift {
+    0% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(
+        135deg,
+        #ffffff,
+        #241f1f,
+        #000000
+      );
+    }
+    50% {
+      background-position: 100% 50%;
+      background-image: linear-gradient(
+        135deg,
+        #1a1a1a,
+        #3e3a3a,
+        #f5f5f5
+      );
+    }
+    100% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(
+        135deg,
+        #ffffff,
+        #291e1e,
+        #000000
+      );
+    }
+  }
+
+  .neon-solid-glow {
+    text-shadow:
+      0 0 4px #000000,
+      0 0 8px currentColor,
+      0 0 12px currentColor,
+      0 0 20px currentColor;
+  }
+
+  @keyframes pulse-blue-gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .btn-rgb-blue {
+    background-image: linear-gradient(to right, #3b82f6, #22d3ee, #6366f1); /* blue, cyan, indigo */
+    background-size: 400% 400%;
+    animation: pulse-blue-gradient 3s ease infinite;
+  }
+   
+  
+  
